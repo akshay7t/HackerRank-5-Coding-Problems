@@ -28,13 +28,16 @@ public class Solution {
         /* Enter your code here. Print output to STDOUT. */
         char[] B= A.toCharArray();
         int n= B.length;
-        for(int i=0; i<n; i++){
-            B[i]= B[n-i];
+        char[] b = new char[n];
+        int j = n;
+        for (int i = 0; i < n; i++) {
+            b[j - 1] = B[i];
+            j = j - 1;
         }
-        String str = String.copyValueOf(B);
-        if(A==str)
+        String x= String.valueOf(b);
+        if(A.equals(x))
         System.out.println("Yes");
         else
-        System.out.println("No"); 
+        System.out.println("No");  
     }
 }
